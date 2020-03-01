@@ -75,7 +75,6 @@ public class ContainerSingleton {
     }
 
     public static class ContainerExectorThread implements Runnable {
-        @Override
         public void run() {
             Object instance = ContainerSingleton.getInstance("com.tps.monitorclient.test.User");
             System.err.println(Thread.currentThread().getName() + ":" + instance);
