@@ -6,7 +6,7 @@ public class LoggerTest {
     private static final Logger log = JsonLoggerFactory.getLogger(LoggerTest.class);
 
     public static void main(String[] args) {
-        log.info("------ 系统信息");
+        log.error("------ 系统信息");
     }
 
 }

@@ -30,7 +30,7 @@ public class JsonLogger extends DecoratorLogger {
     public void error(String s) {
         JSONObject jsonObject = composeJsonResult();
         jsonObject.put("exception", s);
-        logger.error(jsonObject.toString());
+        logger.info(jsonObject.toString());
     }
 
 
