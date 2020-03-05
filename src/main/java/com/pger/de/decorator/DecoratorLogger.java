@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.Marker;
 
 public class DecoratorLogger implements Logger {
-    private Logger logger;
+    protected Logger logger;
 
     public DecoratorLogger(Logger logger) {
         this.logger = logger;
