@@ -9,10 +9,10 @@ public class GperLoginDecorator extends GperMenuDecorator {
     }
 
     @Override
-    protected String getMenu() {
+    protected String getMenu(String login) {
         GperConfig config = GperConfig.getInstance();
-        String info = config.get("loginMenu");
-        return super.getMenu() + "," + info;
+        String info = config.get(login);
+        return super.getMenu(login) + "," + info;
     }
 
 }

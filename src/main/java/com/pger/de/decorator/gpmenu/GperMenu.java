@@ -2,6 +2,6 @@ package com.pger.de.decorator.gpmenu;
 
 public abstract class GperMenu {
 
-    protected abstract String getMenu();
+    protected abstract String getMenu(String login);
 
 }

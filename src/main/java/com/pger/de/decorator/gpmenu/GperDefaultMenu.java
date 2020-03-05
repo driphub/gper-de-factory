@@ -4,9 +4,10 @@ import com.pger.de.decorator.gpmenu.tools.GperConfig;
 
 public class GperDefaultMenu extends GperMenu {
     @Override
-    protected String getMenu() {
+    protected String getMenu(String login) {
         GperConfig prop = GperConfig.getInstance();
-        String viser = prop.get("defaultMenu");
+        login = "defaultMenu";
+        String viser = prop.get(login);
         return viser;
     }
 

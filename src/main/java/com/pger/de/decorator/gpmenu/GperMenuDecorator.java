@@ -9,8 +9,8 @@ public class GperMenuDecorator extends GperMenu {
     }
 
     @Override
-    protected String getMenu() {
-        return this.gperMenu.getMenu();
+    protected String getMenu(String login) {
+        return this.gperMenu.getMenu(login);
     }
 
 }

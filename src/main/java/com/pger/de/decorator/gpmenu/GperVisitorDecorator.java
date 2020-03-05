@@ -7,8 +7,8 @@ public class GperVisitorDecorator extends GperMenuDecorator {
     }
 
     @Override
-    protected String getMenu() {
-        return ">>>>  " + super.getMenu();
+    protected String getMenu(String login) {
+        return ">>>>  " + super.getMenu(login);
     }
 
 }
