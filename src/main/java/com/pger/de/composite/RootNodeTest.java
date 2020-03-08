@@ -7,13 +7,15 @@ public class RootNodeTest {
     public static void main(String[] args) {
         System.err.println("=========== 打印结果 ===========");
         TreeNodeElement parentNode = OperateElementFactory.getInstance().createNodeHandler();
-        parentNode.show();
+        if (parentNode !=null) {
+            parentNode.show();
 
-        System.err.println("========================");
+            System.err.println("========================");
 
-        // 移除节点：
-        RootNode nodeElement = parentNode.getNode(1);
-        parentNode.removeNode(nodeElement);
-        parentNode.show();
+            // 移除节点：
+            RootNode nodeElement = parentNode.getNode(1);
+            parentNode.removeNode(nodeElement);
+            parentNode.show();
+        }
     }
 }
