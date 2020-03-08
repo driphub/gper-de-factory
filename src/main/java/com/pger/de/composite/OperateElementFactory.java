@@ -32,10 +32,10 @@ public class OperateElementFactory {
         TreeNodeElement parentNode = null;
         try {
             Document document = saxReader.read(file);
-            Element rootEle = document.getRootElement();
-            parentNode = new TreeNodeElement(rootEle.getName(), Constants.DEFAULT_LV);
-            List<Element> elementsList = rootEle.elements();
-            addSubNode(parentNode, elementsList, Constants.NEXT_LV);
+            Element rootElement = document.getRootElement();
+            parentNode = new TreeNodeElement(rootElement.getName(), Constants.DEFAULT_LV);
+            List<Element> elementsList = rootElement.elements();
+            addSubNode(parentNode, elementsList, Constants.DEFAULT_LV + 1);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -52,27 +52,27 @@ public class OperateElementFactory {
      */
     private static class Constants {
         public static final Integer DEFAULT_LV = 1;
-        public static final Integer NEXT_LV = 2;
     }
 
     /**
      * 递归xml元素生成子树
      *
      * @param parentNode
-     * @param lv
      * @param elementsList
+     * @param lv
      */
     private static void addSubNode(TreeNodeElement parentNode, List<Element> elementsList, Integer lv) {
         int size = elementsList.size();
         for (int i = 0; i < size; i++) {
             Element element = elementsList.get(i);
-            TreeNodeElement nodeElement = new TreeNodeElement(element.getName(), lv);
-            List<Element> subNodeList = element.elements();
-            if (subNodeList != null && !subNodeList.isEmpty()) {
+            TreeNodeElement subNodeElement = new TreeNodeElement(element.getName(), lv);
+
+            List<Element> subNodeElemList = element.elements();
+            if (subNodeElemList != null && !subNodeElemList.isEmpty()) {
                 lv ++;
-                addSubNode(nodeElement, subNodeList, lv);
+                addSubNode(subNodeElement, subNodeElemList, lv);
             }
-            parentNode.addSubNode(nodeElement);
+            parentNode.addSubNode(subNodeElement);
         }
     }
 
