@@ -69,7 +69,7 @@ public class OperateElementFactory {
             TreeNodeElement nodeElement = new TreeNodeElement(element.getName(), lv);
             List<Element> subNodeList = element.elements();
             if (subNodeList != null && !subNodeList.isEmpty()) {
-                addSubNode(nodeElement, subNodeList,lv + Constants.DEFAULT_LV);
+                addSubNode(nodeElement, subNodeList, lv + Constants.DEFAULT_LV);
             }
             parentNode.addSubNode(nodeElement);
         }
