@@ -9,9 +9,11 @@ import java.util.List;
 public class TreeNodeElement extends RootNode {
 
     private List<RootNode> nodeList;
+    private Integer lv;
 
     public TreeNodeElement(String name, Integer lv) {
-        super(name, lv);
+        super(name);
+        this.lv = lv;
         this.nodeList = new ArrayList<RootNode>();
     }
 

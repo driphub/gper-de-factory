@@ -6,11 +6,9 @@ package com.pger.de.composite;
 public abstract class RootNode {
 
     protected String name;
-    protected Integer lv;
 
-    public RootNode(String name, Integer lv) {
+    public RootNode(String name) {
         this.name = name;
-        this.lv = lv;
     }
 
     public abstract void show();

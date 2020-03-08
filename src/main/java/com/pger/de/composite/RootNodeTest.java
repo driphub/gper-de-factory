@@ -10,7 +10,7 @@ public class RootNodeTest {
         if (parentNode !=null) {
             parentNode.show();
 
-            System.err.println("========================");
+            System.err.println("=========== 分割线 =============");
 
             // 移除节点：
             RootNode nodeElement = parentNode.getNode(1);
