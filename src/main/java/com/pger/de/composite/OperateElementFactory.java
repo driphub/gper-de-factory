@@ -35,7 +35,7 @@ public class OperateElementFactory {
             Element rootEle = document.getRootElement();
             parentNode = new TreeNodeElement(rootEle.getName(), Constants.DEFAULT_LV);
             List<Element> elementsList = rootEle.elements();
-            addSubNode(parentNode, Constants.NEXT_LV, elementsList);
+            addSubNode(parentNode, elementsList, Constants.NEXT_LV);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -62,14 +62,14 @@ public class OperateElementFactory {
      * @param lv
      * @param elementsList
      */
-    private static void addSubNode(TreeNodeElement parentNode, Integer lv, List<Element> elementsList) {
+    private static void addSubNode(TreeNodeElement parentNode, List<Element> elementsList, Integer lv) {
         int size = elementsList.size();
         for (int i = 0; i < size; i++) {
             Element element = elementsList.get(i);
             TreeNodeElement nodeElement = new TreeNodeElement(element.getName(), lv);
             List<Element> subNodeList = element.elements();
             if (subNodeList != null && !subNodeList.isEmpty()) {
-                addSubNode(nodeElement, lv + Constants.DEFAULT_LV, subNodeList);
+                addSubNode(nodeElement, subNodeList,lv + Constants.DEFAULT_LV);
             }
             parentNode.addSubNode(nodeElement);
         }
