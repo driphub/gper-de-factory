@@ -1,6 +1,6 @@
 package com.pger.de.strategy.pay;
 
-import com.gupaoedu.vip.pattern.strategy.pay.payport.PayStrategy;
+import com.pger.de.strategy.pay.payport.PayStrategy;
 
 /**
  * Created by Tom.
