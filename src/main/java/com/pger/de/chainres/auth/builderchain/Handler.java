@@ -2,9 +2,6 @@ package com.pger.de.chainres.auth.builderchain;
 
 import com.pger.de.chainres.auth.Member;
 
-/**
- * Created by Tom.
- */
 public abstract class Handler<T> {
     protected Handler next;
 

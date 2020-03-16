@@ -3,7 +3,6 @@ package com.pger.de.chainres.auth.optimiaze;
 import com.pger.de.chainres.auth.Member;
 
 /**
- * Created by Tom.
  */
 public class LoginHandler extends Handler {
     public void doHandler(Member member) {

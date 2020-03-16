@@ -1,7 +1,6 @@
 package com.pger.de.chainres.auth.optimiaze;
 
 /**
- * Created by Tom.
  */
 public class Test {
     public static void main(String[] args) {

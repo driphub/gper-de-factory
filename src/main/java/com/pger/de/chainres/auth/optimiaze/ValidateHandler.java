@@ -4,7 +4,6 @@ import com.pger.de.chainres.auth.Member;
 import org.springframework.util.StringUtils;
 
 /**
- * Created by Tom.
  */
 public class ValidateHandler extends Handler {
     public void doHandler(Member member) {

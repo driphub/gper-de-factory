@@ -1,7 +1,6 @@
 package com.pger.de.chainres.auth;
 
 /**
- * Created by Tom.
  */
 public class Member {
     private String loginName;
