@@ -1,7 +1,6 @@
 package com.pger.de.strategy.promotion;
 
 /**
- * Created by Tom.
  */
 public class GroupbuyStrategy implements IPromotionStrategy {
     public void doPromotion() {

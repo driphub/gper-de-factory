@@ -1,7 +1,6 @@
 package com.pger.de.strategy.promotion;
 
 /**
- * Created by Tom.
  *
  * 策略上下文context
  */

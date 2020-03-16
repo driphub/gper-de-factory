@@ -1,7 +1,6 @@
 package com.pger.de.strategy.promotion;
 
 /**
- * Created by Tom.
  */
 public class EmptyStrategy implements IPromotionStrategy {
     public void doPromotion() {

@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by Tom.
  */
 public class PromotionStrategyFacory {
 
