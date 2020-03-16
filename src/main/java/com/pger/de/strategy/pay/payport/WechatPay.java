@@ -1,7 +1,6 @@
 package com.pger.de.strategy.pay.payport;
 
 /**
- * Created by Tom.
  */
 public class WechatPay extends Payment {
     public String getName() {

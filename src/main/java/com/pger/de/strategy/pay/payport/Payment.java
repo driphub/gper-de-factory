@@ -4,7 +4,6 @@ package com.pger.de.strategy.pay.payport;
 import com.pger.de.strategy.pay.MsgResult;
 
 /**
- * Created by Tom.
  * <p>
  * 支付渠道
  */
