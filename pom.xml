@@ -72,6 +72,19 @@
 		    <version>2.4</version>
 	    </dependency>
 
+	    <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+	    <dependency>
+		    <groupId>org.openjdk.jol</groupId>
+		    <artifactId>jol-core</artifactId>
+		    <version>0.10</version>
+	    </dependency>
+	    <dependency>
+		    <groupId>io.netty</groupId>
+		    <artifactId>netty-all</artifactId>
+		    <version>4.1.47.Final</version>
+	    </dependency>
+
+
 	    <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
