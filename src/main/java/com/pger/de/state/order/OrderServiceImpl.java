@@ -14,7 +14,7 @@ import java.util.Map;
 public class OrderServiceImpl implements IOrderService {
 
     @Autowired
-    private StateMachine<OrderStatus, OrderStatusChangeEvent> orderStatusMachine;
+    private StateMachine<OrderStatus, OrderStatusChangeEvent> orderStateMachine;
 
     @Autowired
     private StateMachinePersister<OrderStatus, OrderStatusChangeEvent, Order> persister;
@@ -65,25 +65,32 @@ public class OrderServiceImpl implements IOrderService {
     }
 
 
+    /**
+     * 发送订单状态转换事件
+     *
+     * @param message
+     * @param order
+     * @return
+     */
     private synchronized boolean sendEvent(Message<OrderStatusChangeEvent> message, Order order) {
         boolean result = false;
         try {
             // 状态机启动
-            orderStatusMachine.start();
+            orderStateMachine.start();
 
             // 尝试恢复状态机状态
-            persister.restore(orderStatusMachine, order);
+            persister.restore(orderStateMachine, order);
             
             // 添加延迟用于线程安全测试
             Thread.sleep(100);
-            result = orderStatusMachine.sendEvent(message);
+            result = orderStateMachine.sendEvent(message);
 
             // 持久化状态机状态
-            persister.persist(orderStatusMachine, order);
+            persister.persist(orderStateMachine, order);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            orderStatusMachine.stop();
+            orderStateMachine.stop();
         }
         return result;
     }

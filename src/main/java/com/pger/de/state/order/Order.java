@@ -27,8 +27,8 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "id=" + id +
-                ", status=" + status +
+                "订单号=" + id +
+                ", 订单状态=" + status +
                 '}';
     }
 

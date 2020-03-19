@@ -5,6 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+/**
+ * 测试类
+ */
 @SpringBootApplication
 public class OrderTest {
 
@@ -32,6 +35,6 @@ public class OrderTest {
         orderService.deliver(2);
         orderService.receive(2);
 
-        System.out.printf("全部订单状态：" + orderService.getOrders());
+        System.out.printf("全部订单：" + orderService.getOrders());
     }
 }

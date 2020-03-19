@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @WithStateMachine(name = "orderStateMachine")
 public class OrderStatusListenerImpl {
 
-    @OnTransition(source = "WAIT_PAYMENT", target = "WAIT_DELIVED")
+    @OnTransition(source = "WAIT_PAYMENT", target = "WAIT_DELIVER")
     public boolean payTransition(Message<OrderStatusChangeEvent> message) {
         Order order = (Order) message.getHeaders().get("order");
         order.setStatus(OrderStatus.WAIT_DELIVER);
@@ -21,7 +21,7 @@ public class OrderStatusListenerImpl {
         return true;
     }
 
-    @OnTransition(source = "WAIT_DELIVED", target = "WAIT_RECEIVE")
+    @OnTransition(source = "WAIT_DELIVER", target = "WAIT_RECEIVE")
     public boolean deliverTransition(Message<OrderStatusChangeEvent> message) {
         Order order = (Order) message.getHeaders().get("order");
         order.setStatus(OrderStatus.WAIT_RECEIVE);
