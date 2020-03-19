@@ -3,7 +3,6 @@ package com.pger.de.strategy.pay;
 import com.pger.de.strategy.pay.payport.PayStrategy;
 
 /**
- * Created by Tom.
  */
 public class Test {
     public static void main(String[] args) {

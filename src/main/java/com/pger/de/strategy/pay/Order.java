@@ -4,7 +4,6 @@ import com.pger.de.strategy.pay.payport.PayStrategy;
 import com.pger.de.strategy.pay.payport.Payment;
 
 /**
- * Created by Tom.
  */
 public class Order {
     private String uid;

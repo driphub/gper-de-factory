@@ -1,7 +1,6 @@
 package com.pger.de.strategy.pay;
 
 /**
- * Created by Tom.
  */
 public class MsgResult {
     private int code;
