@@ -12,6 +12,6 @@ public abstract class GperTeacher {
         return userName;
     }
 
-    public void publishQuestion(Question question) { }
+    public abstract void publishQuestion(Question question);
 
 }

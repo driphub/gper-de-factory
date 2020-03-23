@@ -19,5 +19,4 @@ public class GperTeacherImpl extends GperTeacher {
         builder.append(question.getContent() + "\n");
         System.out.printf(builder.toString());
     }
-
 }
