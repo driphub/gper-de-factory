@@ -36,12 +36,12 @@ public class SeriableSingleton implements Serializable {
             oos.writeObject(s2);
             oos.flush();
             oos.close();
-            
+
             FileInputStream fis = new FileInputStream("SeriableSingleton.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
             s1 = (SeriableSingleton) ois.readObject();
             ois.close();
-            
+
             System.err.println(s1);
             System.err.println(s2);
             System.err.println(s1 == s2);

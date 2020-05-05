@@ -30,7 +30,9 @@ public class LazyInnerClassSingleton {
     public static void main(String[] args) {
         try {
             Class<?> clazz = LazyInnerClassSingleton.class;
+            // 通过反射获取私有的构造方法
             Constructor constructor = clazz.getDeclaredConstructor(null);
+            // 强制访问
             constructor.setAccessible(true);
             
             Object o1 = constructor.newInstance();
