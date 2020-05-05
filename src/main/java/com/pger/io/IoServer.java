@@ -1,4 +1,4 @@
-package com.pger.de.io;
+package com.pger.io;
 
 import java.io.IOException;
 import java.io.OutputStream;
